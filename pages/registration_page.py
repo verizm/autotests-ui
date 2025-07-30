@@ -12,6 +12,7 @@ class RegistrationPage(BasePage):
         self.password_input = page.get_by_test_id('registration-form-password-input').locator('input')
         self.registration_button = page.get_by_test_id('registration-page-registration-button')
         self.login_link = page.get_by_test_id('registration-page-login-link')
+        self.file_link = page.get_by_title(text="Скачать PDF файл")
 
     def fill_registration_form(self, email: str, user_name: str, password: str):
         self.email_input.fill(email)
